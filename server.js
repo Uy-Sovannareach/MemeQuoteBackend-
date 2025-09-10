@@ -16,7 +16,7 @@ app.use(morgan('tiny'));
 const defaultFrontend = 'https://meme-quote.vercel.app';
 const allowedOrigins = (process.env.CORS_ORIGIN || defaultFrontend).split(',').map(s => s.trim()).filter(Boolean);
 app.use(cors({
-	origin: allowedOrigins.length ? allowedOrigins : true,
+    origin: allowedOrigins.length ? allowedOrigins : true,
 }));
 
 
