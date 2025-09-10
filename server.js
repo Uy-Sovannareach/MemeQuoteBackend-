@@ -15,7 +15,10 @@ app.use(morgan('tiny'));
 // CORS (allow your Next.js origin)
 const allowedOrigins = (process.env.CORS_ORIGIN || '').split(',').map(s => s.trim()).filter(Boolean);
 app.use(cors({
-origin: allowedOrigins.length ? allowedOrigins : true,
+	origin: allowedOrigins.length ? allowedOrigins : [
+		'https://meme-quote.vercel.app/', // <-- replace with your actual frontend Vercel URL
+		'http://localhost:3000'
+	],
 }));
 
 
