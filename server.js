@@ -52,7 +52,7 @@ res.status(500).json({ error: 'Failed to fetch random quote' });
 });
 
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT;
 app.listen(port, () => {
 console.log(`✅ Meme Quote API listening on http://localhost:${port}`);
 });
